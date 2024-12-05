@@ -1,9 +1,16 @@
 module OptTestFunctions
 
-greet() = print("Hello world!")
+include("DixonPrice.jl")
+include("Rosenbrock.jl")
 
-include("extra_file.jl")
+struct problem
+    fun::Function   # Objective function
+    grad::Function  # Gradient function
+    hess::Function  # Hessian function
+end
 
-export my_f
+dixon = problem(dixon_fun, dixon_grad, dixon_hess)
+rosen = problem(dixon_fun, dixon_grad, dixon_hess)
 
+export dixon, rosen, problem
 end
