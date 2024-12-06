@@ -1,8 +1,7 @@
 # Dixon Price Function
+# Reference:
 
-function dixon_fun(x::Vector, n::Int64) 
-    #n= length(x)
-
+function dixon_fun(x::Vector{<:Real}, n::Int64) 
     sum = (x[1] - 1)^2  
     for i in 2:n  
         sum += i * (2*x[i]^2 - x[i-1])^2 
@@ -10,9 +9,7 @@ function dixon_fun(x::Vector, n::Int64)
     return sum 
 end
 
-function dixon_grad(x::Vector, n::Int64)
-    #n= length(x)
-
+function dixon_grad(x::Vector{<:Real}, n::Int64)
     g = zeros(Float64, n) 
     
     if n == 1
@@ -28,7 +25,7 @@ function dixon_grad(x::Vector, n::Int64)
     return g
 end
 
-function dixon_hess(x::Vector, n::Int64)
+function dixon_hess(x::Vector{<:Real}, n::Int64)
     h = zeros(n, n)
 
     if n == 1
