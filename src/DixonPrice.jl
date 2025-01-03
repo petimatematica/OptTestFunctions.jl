@@ -1,5 +1,7 @@
 # Dixon Price Function
-# Reference:
+
+# Reference: L. C. W. Dixon and R. Price. Truncated newton method for sparse unconstrained optimization
+# using automatic differentiation. Journal of Optimization Theory and Applications, 60:261–275, 1989.
 
 function dixon_fun(x::Vector{<:Real}, n::Int64) 
     sum = (x[1] - 1)^2  
