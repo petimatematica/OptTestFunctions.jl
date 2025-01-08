@@ -1,8 +1,7 @@
 # Michalewicz function
 # Reference: MOLGA, Marcin; SMUTNICKI, Czesław. Test functions for optimization needs. Test functions for optimization needs, v. 101, p. 48, 2005.
 
-function michalewicz_fun(x::Vector{<:Real})
-    n = length(x)
+function michalewicz_fun(x::Vector{<:Real}, n::Int64)
     sum = 0
     
     for i = 1:n
@@ -14,8 +13,7 @@ function michalewicz_fun(x::Vector{<:Real})
     return -sum
 end
 
-function michalewicz_grad(x::Vector{<:Real})
-    n = length(x)
+function michalewicz_grad(x::Vector{<:Real}, n::Int64)
     g = zeros(Float64, n)
 
     for i in 1:n 
@@ -28,8 +26,7 @@ function michalewicz_grad(x::Vector{<:Real})
     return g
 end
 
-function michalewicz_hess(x::Vector{<:Real})
-    n = length(x)
+function michalewicz_hess(x::Vector{<:Real}, n::Int64)
     H = zeros(Float64, n, n)
 
     for i in 1:n
@@ -51,3 +48,4 @@ function michalewicz_hess(x::Vector{<:Real})
 
     return H
 end
+

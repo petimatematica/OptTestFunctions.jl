@@ -5,9 +5,10 @@
 function trid_fun(x::Vector{<:Real}, n::Int64)
     sum1 = (x[1] - 1)^2
     sum2 = 0
-    for i in 2:n 
-        sum1 = sum1 + (x[i] - 1)^2
-        sum2 = sum2 + x[i] * x[i-1]
+    for i in 2:n
+        xi = x[i] 
+        sum1 = sum1 + (xi - 1)^2
+        sum2 = sum2 + xi * x[i-1]
     end
     return sum1 - sum2
 end

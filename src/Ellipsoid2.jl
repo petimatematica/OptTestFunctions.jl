@@ -1,10 +1,8 @@
 # Rotated Hyper-Ellipsoid Function
 
 # Reference: MOLGA, Marcin; SMUTNICKI, Czesław. Test functions for optimization needs. Test functions for optimization needs, v. 101, p. 48, 2005.
-
-using ForwardDiff
  
-function ellipsoid_fun(x::Vector{<:Real}, n::Int64)
+function ellipsoid2_fun(x::Vector{<:Real}, n::Int64)
     outer = 0
 
     for k in 1:n 
@@ -18,8 +16,8 @@ function ellipsoid_fun(x::Vector{<:Real}, n::Int64)
     return outer 
 end
 
-function ellipsoid_grad(x::Vector{<:Real}, n::Int64)
-    grad = zeros(n) 
+function ellipsoid2_grad(x::Vector{<:Real}, n::Int64)
+    grad = zeros(Float64, n) 
 
     for i in 1:n
         grad[i] = 2 * x[i] * (n - i + 1)
@@ -28,8 +26,8 @@ function ellipsoid_grad(x::Vector{<:Real}, n::Int64)
     return grad
 end
 
-function ellipsoid_hess(x::Vector{<:Real}, n::Int64)
-    h = zeros(n, n)
+function ellipsoid2_hess(x::Vector{<:Real}, n::Int64)
+    h = zeros(Float64, n, n)
     for i in 1:n 
         h[i, i] = 2 * (n - i +1)
     end

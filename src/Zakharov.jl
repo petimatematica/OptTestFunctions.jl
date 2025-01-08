@@ -41,7 +41,7 @@ function zakharov_hess(x::Vector{<:Real}, n::Int64)
         for j in 1:n 
             if i == j
                 H[i, i] = 2 + 0.5 * i^2 + 3 * i^2 * sum^2 
-                else
+             else
                 H[i, j] = 0.5 * i * j + 3 * i * j * sum^2
             end
         end
