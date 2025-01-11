@@ -16,13 +16,13 @@ end
 
 x = [-658, 6778, 456, 456, 56, 38, 67]
 #x = [1, 2, 3]
-#x = [10]
-#y = dejong_grad(x) 
-z = dejong_hess(x)
+# #x = [10]
+#y = schwefel_grad(x) 
+y = schwefel_hess(x)
 
-t = ForwardDiff.gradient(dejong_fun, x)
-u = ForwardDiff.hessian(dejong_fun, x)
+#t = ForwardDiff.gradient(schwefel_fun, x)
+t = ForwardDiff.hessian(schwefel_fun, x)
 
-println("Algébrico = ", z)
-println("ForwardDiff = ", u)
+println("Algébrico = ", y)
+println("ForwardDiff = ", t)
 
