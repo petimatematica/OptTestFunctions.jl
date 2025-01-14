@@ -14,14 +14,14 @@ function rayleigh_grad(x::Vector{<:Real}, A::Matrix{<:Real})
     2 * (A * x - rayleigh_fun(x, A) * x) / (x' * x)
 end
 
-x = [-658, 6778, 456, 456, 56, 38, 67]
-#x = [1, 2, 3]
+#x = [-858, 6778, 456, 456, 56, 38, 67, 10]
+x = [1, 2, 3]
 # #x = [10]
-#y = schwefel_grad(x) 
-y = schwefel_hess(x)
+#y = ackley_grad(x) 
+y = ackley_hess(x)
 
-#t = ForwardDiff.gradient(schwefel_fun, x)
-t = ForwardDiff.hessian(schwefel_fun, x)
+#t = ForwardDiff.gradient(ackley_fun, x)
+t = ForwardDiff.hessian(ackley_fun, x)
 
 println("Algébrico = ", y)
 println("ForwardDiff = ", t)
