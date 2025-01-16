@@ -1,7 +1,7 @@
 # Perm function n, β
 # Reference:
 
-using ForwardDiff
+#using ForwardDiff
 
 function permbeta_fun(x::Vector{<:Real})
     n = length(x)
@@ -65,7 +65,7 @@ x = [10, 2, 3]
 #y = permbeta_hess(x)
 
 #t = ForwardDiff.gradient(permbeta_fun, x)
-t = ForwardDiff.hessian(permbeta_fun, x)
+#t = ForwardDiff.hessian(permbeta_fun, x)
 
 #println("Algébrico = ", y)
-println("ForwardDiff = ", t)
+#println("ForwardDiff = ", t)
