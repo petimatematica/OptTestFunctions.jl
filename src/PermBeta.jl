@@ -1,10 +1,7 @@
 # Perm function n, β
-# Reference:
+# Reference: PLEVRIS, V.; SOLORZANO, G. A Collection of 30 Multidimensional Functions for Global Optimization Benchmarking. Data 2022, 7, 46. 2022.
 
-#using ForwardDiff
-
-function permbeta_fun(x::Vector{<:Real})
-    n = length(x)
+function permbeta_fun(x::Vector{<:Real}, n::Int64)
     β  = 0.5
     outer = 0
     
@@ -22,8 +19,7 @@ function permbeta_fun(x::Vector{<:Real})
     return y
 end
  
-function permbeta_grad(x::Vector{<:Real})
-    n = length(x)
+function permbeta_grad(x::Vector{<:Real}, n::Int64)
     g = zeros(Float64, n) 
     β = 0.5
 
@@ -50,22 +46,35 @@ function permbeta_grad(x::Vector{<:Real})
     return g
 end
  
-function permbeta_hess(x::Vector{<:Real})
+function permbeta_hess(x::Vector{<:Real}, n::Int64)
     H = zeros(Float64, n, n)
-    
+    β = 0.5
 
+    for k in 1:n
+        for l in 1:n
+            H_kl = 0.0
+
+            for i in 1:n
+                g_i = 0.0
+                for j in 1:n
+                    g_i += (j^i + β) * ((x[j] / j)^i - 1)
+                end
+
+                dg_i_dk = (k^i + β) * i * (x[k] / k)^(i-1) / k
+                dg_i_dl = (l^i + β) * i * (x[l] / l)^(i-1) / l
+
+                if k == l
+                    d2g_i_dk2 = (k^i + β) * i * (i-1) * (x[k] / k)^(i-2) / k^2
+                else
+                    d2g_i_dk2 = 0.0
+                end
+
+                H_kl += 2 * (dg_i_dk * dg_i_dl + g_i * d2g_i_dk2)
+            end
+
+            H[k, l] = H_kl
+        end
+    end
 
     return H
 end
-
-#x = [-858.0, 6778.0, 456.0, 456.0, 56.0, 38.0, 67.0, 10.0]
-x = [10, 2, 3]
-# #x = [10]
-#y = permbeta_grad(x) 
-#y = permbeta_hess(x)
-
-#t = ForwardDiff.gradient(permbeta_fun, x)
-#t = ForwardDiff.hessian(permbeta_fun, x)
-
-#println("Algébrico = ", y)
-#println("ForwardDiff = ", t)
