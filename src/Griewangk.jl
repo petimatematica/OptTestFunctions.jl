@@ -1,8 +1,6 @@
 # Griewank's function
 # Reference: MOLGA, Marcin; SMUTNICKI, Czesław. Test functions for optimization needs. Test functions for optimization needs, v. 101, p. 48, 2005.
 
-using ForwardDiff
-
 function griewangk_fun(x::Vector{<:Real})
     n = length(x)
     sum = 0
