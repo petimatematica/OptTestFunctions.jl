@@ -1,8 +1,7 @@
 # Griewank's function
 # Reference: MOLGA, Marcin; SMUTNICKI, Czesław. Test functions for optimization needs. Test functions for optimization needs, v. 101, p. 48, 2005.
 
-function griewangk_fun(x::Vector{<:Real})
-    n = length(x)
+function griewangk_fun(x::Vector{<:Real}, n::Int64)
     sum = 0
     prod = 1
 
@@ -17,8 +16,7 @@ function griewangk_fun(x::Vector{<:Real})
 
 end
 
-function griewangk_grad(x::Vector{<:Real})
-    n = length(x)
+function griewangk_grad(x::Vector{<:Real}, n::Int64)
     grad = zeros(Float64, n)
     cos_prod = prod(cos(x[i] / sqrt(i)) for i in 1:n)
     
@@ -34,8 +32,7 @@ function griewangk_grad(x::Vector{<:Real})
     return grad
 end
 
-function griewangk_hess(x::Vector{<:Real})
-    n = length(x)
+function griewangk_hess(x::Vector{<:Real}, n::Int64)
     H = zeros(Float64, n, n)
 
     cos_prod = prod(cos(x[i] / sqrt(i)) for i in 1:n)
