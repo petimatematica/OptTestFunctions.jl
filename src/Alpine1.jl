@@ -1,6 +1,6 @@
 # Alpine 1 Function
-# Reference: JAMIL, Momin; YANG, Xin-She. A literature survey of benchmark functions for global optimisation problems. 
-# International Journal of Mathematical Modelling and Numerical Optimisation, v. 4, n. 2, p. 150-194, 2013.
+# Reference: RAHNAMAYAN, Shahryar; TIZHOOSH, Hamid R.; SALAMA, Magdy MA. A novel population initialization method for accelerating evolutionary algorithms. 
+# Computers & Mathematics with Applications, v. 53, n. 10, p. 1605-1614, 2007.
 
 function alpine1_fun(x::Vector{<:Real}, n::Int64)
     sum = 0

@@ -1,6 +1,6 @@
 # Alpine 2 Function
-# Reference: JAMIL, Momin; YANG, Xin-She. A literature survey of benchmark functions for global optimisation problems. 
-# International Journal of Mathematical Modelling and Numerical Optimisation, v. 4, n. 2, p. 150-194, 2013.
+# Reference: CLERC, Maurice. The swarm and the queen: towards a deterministic and adaptive particle swarm optimization. 
+# In: Proceedings of the 1999 congress on evolutionary computation-CEC99 (Cat. No. 99TH8406). IEEE, 1999. p. 1951-1957.
 
 # x_i >= 0
 
