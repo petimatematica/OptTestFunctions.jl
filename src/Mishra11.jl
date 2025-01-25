@@ -1,21 +1,25 @@
-# # Qing function
-# # Reference: QING, Anyong. Dynamic differential evolution strategy and applications in electromagnetic inverse 
-# # scattering problems. IEEE Transactions on Geoscience and remote Sensing, v. 44, n. 1, p. 116-125, 2005.
+# # Mishra 11 function
+# # Reference: 
 
 # using ForwardDiff
 
-# function qing_fun(x::Vector{<:Real})
+# function mishra11_fun(x::Vector{<:Real})
 #     n = length(x)
 #     sum = 0
+#     prod = 1
 
-#     for i in 1:n 
-#         sum += (x[i]^2 - i)^2
+#     for i in 1:n
+#         xi = x[i] 
+#         sum += abs(xi)
+#         prod *= abs(xi)
 #     end
+
+#     y = ((1 / n) * sum - (prod)^(1 / n))^2
     
-#     return sum
+#     return y
 # end
 
-# function qing_grad(x::Vector{<:Real})
+# function mishra11_grad(x::Vector{<:Real})
 #     n = length(x)
 #     g = zeros(Float64, n)
 
@@ -27,7 +31,7 @@
 #     return g
 # end
 
-# function qing_hess(x::Vector{<:Real})
+# function mishra11_hess(x::Vector{<:Real})
 #     n = length(x)
 #     H = zeros(Float64, n, n)
 #     prod = 1
@@ -62,11 +66,11 @@
 # x = [85, 67, 45, 45, 56, 38, 67, 10]
 # #x = [10, 2, 3]
 # # # #x = [10]
-# #y = qing_grad(x) 
-# y = qing_hess(x)
+# #y = mishra11_grad(x) 
+# y = mishra11_hess(x)
 
-# #t = ForwardDiff.gradient(qing_fun, x)
-# t = ForwardDiff.hessian(qing_fun, x)
+# #t = ForwardDiff.gradient(mishra11_fun, x)
+# t = ForwardDiff.hessian(mishra11_fun, x)
 
 # println("Algébrico = ", y)
 # println("ForwardDiff = ", t)
