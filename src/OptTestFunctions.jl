@@ -17,9 +17,12 @@ include("Griewangk.jl")
 include("Levy.jl")
 include("Michalewicz.jl")
 include("Mishra7.jl")
+include("Mishra11.jl")
 include("PermBeta.jl")
 include("Powell.jl")
 include("Qing.jl")
+include("Quartic.jl")
+include("Quintic.jl")
 include("Rastrigin.jl")
 include("Rosenbrock.jl")
 include("Schwefel.jl")
@@ -51,9 +54,12 @@ griewangk = problem(griewangk_fun, griewangk_grad, griewangk_hess)
 levy = problem(levy_fun, levy_grad, levy_hess)
 michalewicz = problem(michalewicz_fun, michalewicz_grad, michalewicz_hess)
 mishra7 = problem(mishra7_fun, mishra7_grad, mishra7_hess)
+mishra11 = problem(mishra11_fun, mishra11_grad, mishra11_hess)
 permbeta = problem(permbeta_fun, permbeta_grad, permbeta_hess)
 powell = problem(powell_fun, powell_grad, powell_hess)
 qing = problem(qing_fun, qing_grad, qing_hess)
+quartic = problem(quartic_fun, quartic_grad, quartic_hess)
+quintic = problem(quintic_fun, quintic_grad, quintic_hess)
 rastrigin = problem(rastrigin_fun, rastrigin_grad, rastrigin_hess)
 rosen = problem(rosen_fun, rosen_grad, rosen_hess)
 schwefel = problem(schwefel_fun, schwefel_grad, schwefel_hess)
@@ -63,6 +69,7 @@ trid = problem(trid_fun, trid_grad, trid_hess)
 zakharov = problem(zakharov_fun, zakharov_grad, zakharov_hess)
 
 export ackley, alpine1, alpine2, chung, cosmix, csendes, deb1, deb2, dejong, dixon, 
-       ellipsoid1, ellipsoid2, exponential, griewangk, levy, michalewicz, mishra7, permbeta, 
-       powell, qing, rastrigin, rosen, schwefel, stytang, sumpower, trid, zakharov, problem
+       ellipsoid1, ellipsoid2, exponential, griewangk, levy, michalewicz, mishra7, 
+       mishra11, permbeta, powell, qing, quartic, quintic, rastrigin, rosen, schwefel, 
+       stytang, sumpower, trid, zakharov, problem
 end
