@@ -1,76 +1,68 @@
-# # Mishra 11 function
-# # Reference: 
+# Mishra 11 function
+# Reference: MISHRA, Sudhanshu K. Global optimization by differential evolution and particle 
+# swarm methods: Evaluation on some benchmark functions. Available at SSRN 933827, 2006.
 
-# using ForwardDiff
+# x_i different of zero
 
-# function mishra11_fun(x::Vector{<:Real})
-#     n = length(x)
-#     sum = 0
-#     prod = 1
+function mishra11_fun(x::Vector{<:Real}, n::Int64)
+    sum_xi = sum(abs.(x))
+    prod_xi = prod(x)
 
-#     for i in 1:n
-#         xi = x[i] 
-#         sum += abs(xi)
-#         prod *= abs(xi)
-#     end
-
-#     y = ((1 / n) * sum - (prod)^(1 / n))^2
+    y = (sum_xi / n - (abs(prod_xi))^(1 / n))^2
     
-#     return y
-# end
+    return y
+end
 
-# function mishra11_grad(x::Vector{<:Real})
-#     n = length(x)
-#     g = zeros(Float64, n)
+function mishra11_grad(x::Vector{<:Real}, n::Int64)
+    g = zeros(Float64, n)
+    sum_xi = sum(abs.(x))
+    prod_xi = prod(x)
 
-#     for i in 1:n 
-#         xi = x[i]
-#         g[i] = 4 * xi * (xi^2 - i)
-#     end
+    for i in 1:n
+        xi = x[i]
+        A = sum_xi / n
+        B = abs(prod_xi)^(1 / n)
+
+        g[i] = (2 * (A - B) * sign(xi) / n) * (1 - B / abs(xi))
+    end
  
-#     return g
-# end
+    return g
+end
 
-# function mishra11_hess(x::Vector{<:Real})
-#     n = length(x)
-#     H = zeros(Float64, n, n)
-#     prod = 1
+function mishra11_hess(x::Vector{<:Real}, n::Int64)
+    H = zeros(Float64, n, n)
+    sum_abs_x = sum(abs.(x))
+    prod_xi = prod(x)
+    abs_prod = abs(prod_xi)
+    A = sum_abs_x / n
+    B = abs_prod^(1 / n)
+    
+    for i in 1:n
+        xi = x[i]
+        sign_xi = sign(xi)
+        abs_xi = abs(xi)
+        term1 = (2 / n^2) * (1 - B / abs_xi) * (1 - B / abs_xi)
+        term2 = ((2 * (A - B) * sign_xi) / n) * ((B * sign_xi / xi^2) * (1 - 1 / n))
 
-#     for i in 1:n 
-#         prod *= x[i]
-#     end
+        H[i, i] = term1 + term2       
+    end
 
-#     for i in 1:n
-#         H[i, i] = 12 * x[i]^2 - 4 * i
-#     end
+    for i in 1:n
+        for j in 1:n
+            if i != j
+                xi = x[i]
+                xj = x[j]
+                sign_xi = sign(xi)
+                sign_xj = sign(xj)
+                abs_xi = abs(xi)
+                abs_xj = abs(xj)
+                term1 = (2 * sign_xi / n^2) * (sign_xj - B * sign_xj / abs_xj) * (1 - B / abs_xi)
+                term2 = ((2 * (A - B) * sign_xi) / n) * (- B * sign_xj / (n * abs_xj * abs_xi))
 
-#     return H
-# end
+                H[i, j] = term1 + term2
+            end
+        end
+    end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# x = [85, 67, 45, 45, 56, 38, 67, 10]
-# #x = [10, 2, 3]
-# # # #x = [10]
-# #y = mishra11_grad(x) 
-# y = mishra11_hess(x)
-
-# #t = ForwardDiff.gradient(mishra11_fun, x)
-# t = ForwardDiff.hessian(mishra11_fun, x)
-
-# println("Algébrico = ", y)
-# println("ForwardDiff = ", t)
+    return H
+end
