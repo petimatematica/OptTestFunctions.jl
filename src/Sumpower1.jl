@@ -33,4 +33,3 @@ function sumpower_hess(x::Vector{<:Real}, n::Int64)
     
     return H
 end
-

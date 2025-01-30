@@ -10,8 +10,10 @@ include("Deb1.jl")
 include("Deb2.jl")
 include("Dejong.jl")
 include("DixonPrice.jl")
+include("DropWave.jl")
 include("Ellipsoid1.jl")
 include("Ellipsoid2.jl")
+include("Elliptic.jl")
 include("Exponential.jl")
 include("Griewangk.jl")
 include("Levy.jl")
@@ -28,7 +30,7 @@ include("Rosenbrock.jl")
 include("Salomon.jl")
 include("Schwefel.jl")
 include("Stytang.jl")
-include("Sumpower.jl")
+include("Sumpower1.jl")
 include("Trid.jl")
 include("Trigonometric.jl")
 include("Xinsheyang.jl")
@@ -50,8 +52,10 @@ deb1 = problem(deb1_fun, deb1_grad, deb1_hess)
 deb2 = problem(deb2_fun, deb2_grad, deb2_hess)
 dejong = problem(dejong_fun, dejong_grad, dejong_hess)
 dixon = problem(dixon_fun, dixon_grad, dixon_hess)
+dropwave = problem(dropwave_fun, dropwave_grad, dropwave_hess)
 ellipsoid1 = problem(ellipsoid1_fun, ellipsoid1_grad, ellipsoid1_hess)
 ellipsoid2 = problem(ellipsoid2_fun, ellipsoid2_grad, ellipsoid2_hess)
+elliptic = problem(elliptic_fun, elliptic_grad, elliptic_hess)
 exponential = problem(exponential_fun, exponential_grad, exponential_hess)
 griewangk = problem(griewangk_fun, griewangk_grad, griewangk_hess)
 levy = problem(levy_fun, levy_grad, levy_hess)
@@ -75,7 +79,8 @@ xinsheyang = problem(xinsheyang_fun, xinsheyang_grad, xinsheyang_hess)
 zakharov = problem(zakharov_fun, zakharov_grad, zakharov_hess)
 
 export ackley, alpine1, alpine2, chung, cosmix, csendes, deb1, deb2, dejong, dixon, 
-       ellipsoid1, ellipsoid2, exponential, griewangk, levy, michalewicz, mishra7, 
-       mishra11, permbeta, powell, qing, quartic, quintic, rastrigin, rosen, salomon, 
-       schwefel, stytang, sumpower, trid, trigonometric, xinsheyang, zakharov, problem
+       dropwave, ellipsoid1, ellipsoid2, elliptic, exponential, griewangk, levy, 
+       michalewicz, mishra7, mishra11, permbeta, powell, qing, quartic, quintic, 
+       rastrigin, rosen, salomon, schwefel, stytang, sumpower, trid, trigonometric, 
+       xinsheyang, zakharov, problem
 end
