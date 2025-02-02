@@ -1,54 +1,65 @@
-# # High Conditioned Elliptic function
+# Sum of different power 2 function
 
-# # Reference: TAN, Y. Chapter 12-A CUDA-Based Test Suit. Gpu-Based Parallel Implementation of Swarm Intelligence Algorithms; Tan, Y., Ed, p. 179-206, 2016.
+# Reference: TAN, Y. Chapter 12-A CUDA-Based Test Suit. Gpu-Based Parallel Implementation of Swarm Intelligence Algorithms; Tan, Y., Ed, p. 179-206, 2016.
 
-# using ForwardDiff
+function sumpower2_fun(x::Vector{<:Real}, n::Int64)
+    sum = 0
 
-# function elliptic_fun(x::Vector{<:Real})
-#     n = length(x)
-#     sum = 0
-
-#     for i in 1:n
-#         sum += 10^(6 * (i - 1) / (n - 1)) * x[i]^2
-#     end
+    for i in 1:n
+        sum += abs(x[i])^(2 + (4 * (i - 1) / (n - 1)))
+    end
     
-#     return sum
-# end
+    y = sqrt(sum)
 
-# function elliptic_grad(x::Vector{<:Real})
-#     n = length(x)
-#     g = zeros(Float64, n)
+    return y
+end
 
-#     for i in 1:n
-#         g[i] = 2 * 10^(6 * (i - 1) / (n - 1)) * x[i]
-#     end
+function sumpower2_grad(x::Vector{<:Real}, n::Int64)
+    g = zeros(Float64, n)
+    sum = 0
+
+    for i in 1:n
+        sum += abs(x[i])^(2 + (4 * (i - 1) / (n - 1)))
+    end
+
+    for i in 1:n
+        xi = x[i]
+        g[i] = ((2 + (4 * (i - 1) / (n - 1))) * abs(xi)^(1 + (4 * (i - 1) / (n - 1))) * sign(xi)) / (2 * sqrt(sum))
+    end
  
-#     return g
-# end
+    return g
+end
 
-# function elliptic_hess(x::Vector{<:Real})
-#     n = length(x)
-#     H = zeros(Float64, n, n)
+function sumpower2_hess(x::Vector{<:Real}, n::Int64)
+    H = zeros(Float64, n, n)
+    sum = 0
 
-#     for i in 1:n
-#         H[i, i] = 2 * 10^(6 * (i - 1) / (n - 1))
-#     end
+    for i in 1:n
+        sum += abs(x[i])^(2 + (4 * (i - 1) / (n - 1)))
+    end
 
-#     return H
-# end
+    for i in 1:n
+        xi = x[i]
+        A = (2 + (4 * (i - 1) / (n - 1))) * abs(xi)^(1 + (4 * (i - 1) / (n - 1))) * sign(xi)
+        d_A = (2 + 4 * ((i - 1) / (n - 1))) * (1 + 4 * ((i - 1) / (n - 1))) * abs(xi)^(4 * ((i - 1) / (n - 1)))
+        B = 2 * sqrt(sum)
+        d_B = ((2 + (4 * (i - 1) / (n - 1))) * abs(xi)^(1 + (4 * (i - 1) / (n - 1))) * sign(xi)) / sqrt(sum)
+        H[i, i] = (d_A * B - A * d_B) / B^2
+    end
 
+    for i in 1:n 
+        for j in 1:n
+            if i !=j
+                xi = x[i]
+                xj = x[j]
+                A = (2 + (4 * (i - 1) / (n - 1))) * abs(xi)^(1 + (4 * (i - 1) / (n - 1))) * sign(xi)
+                B = 2 * sqrt(sum)
+                d_B = ((2 + (4 * (j - 1) / (n - 1))) * abs(xj)^(1 + (4 * (j - 1) / (n - 1))) * sign(xj)) / sqrt(sum)
+    
+                H[i, j] = (- A * d_B) / B^2  
+            end
+        end
+    end
 
-
-
-
-# x = [-858, 67, 456, 456, 56, 38, 67, 10]
-# #x = [1, 2, 3]
-# # # #x = [10]
-# #y = elliptic_grad(x) 
-# y = elliptic_hess(x)
-
-# #t = ForwardDiff.gradient(elliptic_fun, x)
-# t = ForwardDiff.hessian(elliptic_fun, x)
-
-# println("Algébrico = ", y)
-# println("ForwardDiff = ", t)
+    return H
+end

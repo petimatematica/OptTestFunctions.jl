@@ -1,7 +1,7 @@
-# Sum of different power function
+# Sum of different power 1 function
 # Reference: MOLGA, Marcin; SMUTNICKI, Czesław. Test functions for optimization needs. Test functions for optimization needs, v. 101, p. 48, 2005.
 
-function sumpower_fun(x::Vector{<:Real}, n::Int64)
+function sumpower1_fun(x::Vector{<:Real}, n::Int64)
     sum = 0
 
     for i in 1:n 
@@ -11,7 +11,7 @@ function sumpower_fun(x::Vector{<:Real}, n::Int64)
     return sum
 end
 
-function sumpower_grad(x::Vector{<:Real}, n::Int64)
+function sumpower1_grad(x::Vector{<:Real}, n::Int64)
     g = zeros(Float64, n) 
     
     for i in 1:n
@@ -22,7 +22,7 @@ function sumpower_grad(x::Vector{<:Real}, n::Int64)
     return g
 end
 
-function sumpower_hess(x::Vector{<:Real}, n::Int64)
+function sumpower1_hess(x::Vector{<:Real}, n::Int64)
     H = zeros(Float64, n, n)
 
     for i in 1:n 

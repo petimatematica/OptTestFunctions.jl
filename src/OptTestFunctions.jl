@@ -26,11 +26,13 @@ include("Qing.jl")
 include("Quartic.jl")
 include("Quintic.jl")
 include("Rastrigin.jl")
+include("Ridge.jl")
 include("Rosenbrock.jl")
 include("Salomon.jl")
 include("Schwefel.jl")
 include("Stytang.jl")
 include("Sumpower1.jl")
+include("Sumpower2.jl")
 include("Trid.jl")
 include("Trigonometric.jl")
 include("Xinsheyang.jl")
@@ -68,11 +70,13 @@ qing = problem(qing_fun, qing_grad, qing_hess)
 quartic = problem(quartic_fun, quartic_grad, quartic_hess)
 quintic = problem(quintic_fun, quintic_grad, quintic_hess)
 rastrigin = problem(rastrigin_fun, rastrigin_grad, rastrigin_hess)
+ridge = problem(ridge_fun, ridge_grad, ridge_hess)
 rosen = problem(rosen_fun, rosen_grad, rosen_hess)
 salomon = problem(salomon_fun, salomon_grad, salomon_hess)
 schwefel = problem(schwefel_fun, schwefel_grad, schwefel_hess)
 stytang = problem(stytang_fun, stytang_grad, stytang_hess)
-sumpower = problem(sumpower_fun, sumpower_grad, sumpower_hess)
+sumpower1 = problem(sumpower1_fun, sumpower1_grad, sumpower1_hess)
+sumpower2 = problem(sumpower2_fun, sumpower2_grad, sumpower2_hess)
 trid = problem(trid_fun, trid_grad, trid_hess)
 trigonometric = problem(trigonometric_fun, trigonometric_grad, trigonometric_hess)
 xinsheyang = problem(xinsheyang_fun, xinsheyang_grad, xinsheyang_hess)
@@ -81,6 +85,6 @@ zakharov = problem(zakharov_fun, zakharov_grad, zakharov_hess)
 export ackley, alpine1, alpine2, chung, cosmix, csendes, deb1, deb2, dejong, dixon, 
        dropwave, ellipsoid1, ellipsoid2, elliptic, exponential, griewangk, levy, 
        michalewicz, mishra7, mishra11, permbeta, powell, qing, quartic, quintic, 
-       rastrigin, rosen, salomon, schwefel, stytang, sumpower, trid, trigonometric, 
-       xinsheyang, zakharov, problem
+       rastrigin, ridge, rosen, salomon, schwefel, stytang, sumpower1, sumpower2, 
+       trid, trigonometric, xinsheyang, zakharov, problem
 end
