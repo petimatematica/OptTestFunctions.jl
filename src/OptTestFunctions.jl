@@ -17,6 +17,7 @@ include("Elliptic.jl")
 include("Exponential.jl")
 include("Griewangk.jl")
 include("HappyCat.jl")
+include("HGBat.jl")
 include("Levy.jl")
 include("Michalewicz.jl")
 include("Mishra7.jl")
@@ -62,6 +63,7 @@ elliptic = problem(elliptic_fun, elliptic_grad, elliptic_hess)
 exponential = problem(exponential_fun, exponential_grad, exponential_hess)
 griewangk = problem(griewangk_fun, griewangk_grad, griewangk_hess)
 happycat = problem(happycat_fun, happycat_grad, happycat_hess)
+hgbat = problem(hgbat_fun, hgbat_grad, hgbat_hess)
 levy = problem(levy_fun, levy_grad, levy_hess)
 michalewicz = problem(michalewicz_fun, michalewicz_grad, michalewicz_hess)
 mishra7 = problem(mishra7_fun, mishra7_grad, mishra7_hess)
@@ -86,7 +88,7 @@ zakharov = problem(zakharov_fun, zakharov_grad, zakharov_hess)
 
 export ackley, alpine1, alpine2, chung, cosmix, csendes, deb1, deb2, dejong, dixon, 
        dropwave, ellipsoid1, ellipsoid2, elliptic, exponential, griewangk, happycat,
-       levy, michalewicz, mishra7, mishra11, permbeta, powell, qing, quartic, quintic, 
-       rastrigin, ridge, rosen, salomon, schwefel, stytang, sumpower1, sumpower2, 
+       hgbat, levy, michalewicz, mishra7, mishra11, permbeta, powell, qing, quartic, 
+       quintic, rastrigin, ridge, rosen, salomon, schwefel, stytang, sumpower1, sumpower2, 
        trid, trigonometric, xinsheyang, zakharov, problem
 end
