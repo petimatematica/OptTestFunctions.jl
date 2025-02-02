@@ -1,79 +1,58 @@
-# # Modified Ridge function
+# HappyCat function
 
-# # Reference: PLEVRIS, Vagelis; SOLORZANO, German. A collection of 30 multidimensional 
-# # functions for global optimization benchmarking. Data, v. 7, n. 4, p. 46, 2022.
+# Reference: TAN, Y. Chapter 12-A CUDA-Based Test Suit. Gpu-Based Parallel Implementation of Swarm Intelligence Algorithms; Tan, Y., Ed, p. 179-206, 2016.
 
+function happycat_fun(x::Vector{<:Real}, n::Int64)
+    sum1 = 0
+    sum2 = 0
 
-# using ForwardDiff
-
-# function ridge_fun(x::Vector{<:Real})
-#     n = length(x)
-#     sum = 0
-
-#     for i in 2:n
-#         sum += x[i]^2
-#     end
+    for i in 1:n
+        xi = x[i]
+        sum1 += xi^2
+        sum2 += xi
+    end
     
-#     y = abs(x[1]) + 2 * sum^(0.1)
+    y = abs(sum1 - n)^(0.25) + (0.5 * sum1 + sum2) / n + 0.5
 
-#     return y
-# end
+    return y
+end
 
-# function ridge_grad(x::Vector{<:Real})
-#     n = length(x)
-#     g = zeros(Float64, n)
-#     sum = 0
+function happycat_grad(x::Vector{<:Real}, n::Int64)
+    g = zeros(Float64, n)
+    sum = 0
 
-#     for i in 2:n
-#         sum += x[i]^2
-#     end
+    for i in 1:n
+        sum += x[i]^2
+    end
 
-#     g[1] = sign(x[1]) 
-
-#     for i in 2:n
-#         g[i] = 0.4 * x[i] * sum^(- 0.9)
-#     end
+    for i in 1:n
+        xi = x[i]
+        g[i] = (xi / 2) * abs(sum - n)^(- 3 / 4) * sign(sum - n) + (xi + 1) / n 
+    end
  
-#     return g
-# end
+    return g
+end
 
-# function ridge_hess(x::Vector{<:Real})
-#     n = length(x)
-#     H = zeros(Float64, n, n)
-#     sum = 0
+function happycat_hess(x::Vector{<:Real}, n::Int64)
+    H = zeros(Float64, n, n)
+    sum = 0
 
-#     for i in 2:n
-#         sum += x[i]^2
-#     end
+    for i in 1:n
+        sum += x[i]^2
+    end
 
-#     for i in 2:n
-#         H[i, i] = 0.4 * sum^(-0.9) - 0.72 * x[i]^2 * sum^(- 1.9)
-#     end
+    for i in 1:n
+        H[i, i] = (1 / 2) * abs(sum - n)^(-3 / 4) * sign(sum - n) - 3 * x[i]^2 / 4 * abs(sum - n)^(- 7 / 4) + 1 / n
+    end
 
-#     for i in 2:n 
-#         for j in (i + 1):n
-#             if i !=j
-#                 H[i, j] = - 0.72 * x[i] * x[j] * sum^(- 1.9)  
-#                 H[j, i] = H[i, j]
-#             end
-#         end
-#     end
+    for i in 1:n 
+        for j in (i + 1):n
+            if i !=j
+                H[i, j] = - (3 / 4) * x[i] * x[j] * abs(sum - n)^(-7 / 4) * sign(sum - n)
+                H[j, i] = H[i, j]
+            end
+        end
+    end
 
-#     return H
-# end
-
-
-
-
-
-# x = [-858, 67, 456, 456, 56, 38, 67, 10]
-# #x = [1, 2, 3]
-# # # #x = [10]
-# #y = ridge_grad(x) 
-# y = ridge_hess(x)
-
-# #t = ForwardDiff.gradient(ridge_fun, x)
-# t = ForwardDiff.hessian(ridge_fun, x)
-
-# println("Algébrico = ", y)
-# println("ForwardDiff = ", t)
+    return H
+end
