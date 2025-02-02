@@ -1,4 +1,5 @@
 # Cosine Mixture function
+
 # Reference: ALI, M. Montaz; KHOMPATRAPORN, Charoenchai; ZABINSKY, Zelda B. A numerical evaluation 
 # of several stochastic algorithms on selected continuous global optimization test problems. Journal of global optimization, v. 31, p. 635-672, 2005.
 

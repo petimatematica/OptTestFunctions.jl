@@ -1,4 +1,5 @@
 # Perm function n, β
+
 # Reference: PLEVRIS, V.; SOLORZANO, G. A Collection of 30 Multidimensional Functions for Global Optimization Benchmarking. Data 2022, 7, 46. 2022.
 
 function permbeta_fun(x::Vector{<:Real}, n::Int64)

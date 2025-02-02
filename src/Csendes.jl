@@ -1,4 +1,5 @@
-# Cosine Mixture function
+# Csendes function
+
 # Reference: CSENDES, Tibor; RATZ, Dietmar. Subdivision direction selection in interval methods 
 # for global optimization. SIAM Journal on Numerical Analysis, v. 34, n. 3, p. 922-938, 1997.
 

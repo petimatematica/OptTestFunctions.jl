@@ -1,4 +1,5 @@
 # Styblinsky-Tang function
+
 # Reference: AFFAN, Mohammad. Meta-heuristic based optimization algorithms: a comparative study of genetic algorithm and particle swarm optimization. 2017.
 
 function stytang_fun(x::Vector{<:Real}, n::Int64)
@@ -35,4 +36,3 @@ function stytang_hess(x::Vector{<:Real}, n::Int64)
 
     return H
 end
-

@@ -42,6 +42,3 @@ function trigonometric_hess(x::Vector{<:Real}, n::Int64)
 
     return H
 end
-
-
-

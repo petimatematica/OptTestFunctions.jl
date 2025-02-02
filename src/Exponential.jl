@@ -1,4 +1,5 @@
 # Exponential function
+
 # Reference: RAHNAMAYAN, Shahryar; TIZHOOSH, Hamid R.; SALAMA, Magdy MA. Opposition-based differential evolution (ODE) with variable jumping rate. 
 # In: 2007 IEEE symposium on foundations of computational intelligence. IEEE, 2007. p. 81-88.
 

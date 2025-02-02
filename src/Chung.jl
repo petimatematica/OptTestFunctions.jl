@@ -1,4 +1,5 @@
 # Chung Reynolds function
+
 # Reference: CHUNG, Chan-Jin; REYNOLDS, Robert G. CAEP: An evolution-based tool for real-valued function optimization using cultural algorithms. 
 # International Journal on Artificial Intelligence Tools, v. 7, n. 03, p. 239-291, 1998.
 

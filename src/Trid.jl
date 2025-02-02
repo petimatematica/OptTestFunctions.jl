@@ -1,4 +1,5 @@
 # Trid Function 
+
 # Reference: E. P. Adorio and U. Diliman. Mvf-multivariate test functions library in c for unconstrained
 # global optimization. Quezon City, Metro Manila, Philippines, 44, 2005.
 

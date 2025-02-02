@@ -1,4 +1,5 @@
 # Salomon function
+
 # Reference: SALOMON, Ralf. Re-evaluating genetic algorithm performance under coordinate rotation of benchmark functions. 
 # A survey of some theoretical and practical aspects of genetic algorithms. BioSystems, v. 39, n. 3, p. 263-278, 1996.
 

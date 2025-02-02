@@ -1,4 +1,5 @@
 # Rastrigin Function
+
 # Reference: H. Pohlheim. Examples of objective functions. Retrieved, 4(10):2012, 2007.
 
 function rastrigin_fun(x::Vector{<:Real}, n::Int64)

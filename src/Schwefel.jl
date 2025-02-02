@@ -45,32 +45,3 @@ function schwefel_hess(x::Vector{<:Real})
 
     return H
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

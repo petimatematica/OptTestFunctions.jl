@@ -1,4 +1,5 @@
 # Quartic function
+
 # Reference: STORN, Rainer; PRICE, Kenneth. Differential evolution–a simple and efficient heuristic 
 # for global optimization over continuous spaces. Journal of global optimization, v. 11, p. 341-359, 1997.
 

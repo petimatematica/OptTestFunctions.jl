@@ -1,4 +1,5 @@
 # Michalewicz function
+
 # Reference: MOLGA, Marcin; SMUTNICKI, Czesław. Test functions for optimization needs. Test functions for optimization needs, v. 101, p. 48, 2005.
 
 function michalewicz_fun(x::Vector{<:Real}, n::Int64)

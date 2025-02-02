@@ -1,4 +1,5 @@
 # Qing function
+
 # Reference: QING, Anyong. Dynamic differential evolution strategy and applications in electromagnetic inverse 
 # scattering problems. IEEE Transactions on Geoscience and remote Sensing, v. 44, n. 1, p. 116-125, 2005.
 
