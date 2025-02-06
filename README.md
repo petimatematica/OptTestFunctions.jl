@@ -23,6 +23,12 @@ $f(x) = \left( \sum \limits_{i=1}^{n} x_i^2 \right)^2$
 
 $f(x)=-0,1 \sum \limits_{i=1}^{n} \cos(5 \pi x_i) - \displaystyle\sum \limits_{i=1}^{n} x_i^2$
 
+$$ 
+f(x) = -0.1 \sum\limits_{i=1}^{n} \cos(5 \pi x_i) 
+- \sum\limits_{i=1}^{n} x_i^2 
+$$
+
+
 **6. Função Csendes**
 
 $f(x)=\sum \limits_{i=1}^{n} x_i^6 \left( 2 + \text{sen} \ \dfrac{1}{x_i} \right)$
