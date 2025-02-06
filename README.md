@@ -69,7 +69,7 @@ A função Dixon-Price consiste em $f : \mathbb{R}^n \rightarrow [0, +\infty)$ d
 
 **17. Função HappyCat**
 
-![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\left%20\vert%20\sum%20\limits_{i=1}^D%20x_i^2-%20D%20\right\vert^{1/4}%20+%20\dfrac{0.5%20\sum%20\limits_{i=1}^n%20x_i^2%20+%20\sum%20\limits_{i=1}^n%20x_i}{n}%20+0.5)
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\left%20\vert%20\sum%20\limits_{i=1}^n%20x_i^2-%20n%20\right\vert^{1/4}%20+%20\dfrac{0.5%20\sum%20\limits_{i=1}^n%20x_i^2%20+%20\sum%20\limits_{i=1}^n%20x_i}{n}%20+0.5)
 
 **18. Função HGBat**
 
