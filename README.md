@@ -102,7 +102,7 @@ $f(x)= \left \vert (\sum \limits_{i=1}^D x_i^2)- (\sum \limits_{i=1}^D x_i) \rig
 
 **30. Função Ridge Modificada**
 
-**31. Função de Rosenbroc**
+**31. Função de Rosenbrock**
 
 **32. Função Salomon**
 
