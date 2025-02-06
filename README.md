@@ -45,7 +45,7 @@ A função Dixon-Price consiste em $f : \mathbb{R}^n \rightarrow [0, +\infty)$ d
 
 **11. Função Drop Wave**
 
-![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%201-%20\dfrac{1%2B\cos%20\left(12\sqrt{\sum%20\limits_{i=1}^n%20x_i^2}\right)}{0.5%20\sum%20\limits_{i=1}^D%20x_i^2%2B2})
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%201-%20\dfrac{1%2B\cos%20\left(12\sqrt{\sum%20\limits_{i=1}^n%20x_i^2}\right)}{0.5%20\sum%20\limits_{i=1}^n%20x_i^2%2B2})
 
 **12. Função Ellipsoid 1**
 
