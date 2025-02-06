@@ -25,49 +25,49 @@ Este documento apresenta uma coleção de funções teste para o estudo e desenv
 
 **6. Função Csendes**
 
-$f(x)=\sum \limits_{i=1}^{n} x_i^6 \left( 2 + \text{sen} \ \dfrac{1}{x_i} \right)$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\sum%20\limits_{i=1}^{n}%20x_i^6%20\left(%202%20+%20\sin%20\frac{1}{x_i}%20\right))
 
 **7. Função Deb 1**
 
-$f(x)= -\frac{1}{D}\sum \limits_{i=1}^D \sin^6(5\pi x_i)$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20-\frac{1}{D}%20\sum%20\limits_{i=1}^{D}%20\sin^6(5\pi%20x_i))
 
 **8. Função Deb 2**
 
-$f(x)= -\frac{1}{D}\sum \limits_{i=1}^D \sin^6(5\pi(x_i^{3/4}-0.05))$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20-\frac{1}{D}%20\sum%20\limits_{i=1}^{D}%20\sin^6\left(5\pi\left(x_i^{\frac{3}{4}}-0.05\right)\right))
 
 **9. Função Dejong**
 
 **10. Função Dixon Price**
 
-$f(x)=(x_1-1)^2+\sum \limits_{i=2}^D i(2x_i^2-x_{i_1})^2$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20(x_1-1)^2%20+%20\sum%20\limits_{i=2}^{D}%20i(2x_i^2-x_{i-1})^2)
 
 **11. Função Drop Wave**
 
-$f(x)= 1- \dfrac{1+\cos \left(12\sqrt{\sum \limits_{i=1}^D x_i^2}\right)}{0.5 \sum \limits_{i=1}^D x_i^2+2}$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%201-%20\dfrac{1%2B\cos%20\left(12\sqrt{\sum%20\limits_{i=1}^D%20x_i^2}\right)}{0.5%20\sum%20\limits_{i=1}^D%20x_i^2%2B2})
 
 **12. Função Ellipsoid 1**
 
-$f(x)= \sum \limits_{i=1}^n (i \cdot x_i^2)$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\sum%20\limits_{i=1}^n%20(i%20\cdot%20x_i^2))
 
 **13. Função Ellipsoid 2**
 
-$f(x)= \sum \limits_{i=1}^n \sum \limits_{j=1}^i x_j^2$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\sum%20\limits_{i=1}^n%20\sum%20\limits_{j=1}^i%20x_j^2)
 
 **14. Função High Conditioned**
 
-$f(x)=\sum \limits_{i=1}^D \left((10^6)^{\frac{i-1}{D-1}} \cdot x_i^2\right)$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\sum%20\limits_{i=1}^D%20\left((10^6)^{\frac{i-1}{D-1}}%20\cdot%20x_i^2\right))
 
 **15. Função Exponential**
 
-$f(x)= -\exp{\left(-0.5 \sum \limits_{i=1}^D x_i^2 \right)}$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20-\exp%7B\left(-0.5%20\sum%20\limits_{i=1}^D%20x_i^2%20\right)%7D)
 
 **16. Função de Griewangk**
 
-$f(x)= \sum \limits_{i=1}^n \frac{x_i^2}{4000} - \prod \cos \left(\frac{x_i}{\sqrt{i}} \right)+1$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\sum%20\limits_{i=1}^n%20\frac{x_i^2}{4000}%20-%20\prod%20\cos%20\left(\frac{x_i}{\sqrt{i}}\right)%2B1)
 
 **17. Função HappyCat**
 
-$f(x)= \left \vert \sum \limits_{i=1}^D x_i^2- D \right\vert^{1/4} + \dfrac{0.5 \sum \limits_{i=1}^D x_i^2+\sum \limits_{i=1}^D x_i}{D}+0.5$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\left%20\vert%20\sum%20\limits_{i=1}^D%20x_i^2-%20D%20\right\vert^{1/4}%20+%20\dfrac{0.5%20\sum%20\limits_{i=1}^D%20x_i^2%20+%20\sum%20\limits_{i=1}^D%20x_i}{D}%20+0.5)
 
 **18. Função HGBat**
 
