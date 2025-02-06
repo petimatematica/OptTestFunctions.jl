@@ -9,22 +9,19 @@ Este documento apresenta uma coleção de funções teste para o estudo e desenv
 
 **2. Função Alpine 1**
 
-$f(x) = \sum \limits_{i=1}^{n} \left|x_i \text{sen}(x_i) + 0,1x_i \right|$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\sum%20\limits_{i=1}^{n}%20\left|x_i%20\sin(x_i)%20+%200.1x_i%20\right|)
 
 **3. Função Alpine 2**
 
-$f(x) = \prod \limits_{i=1}^{n} \sqrt{x_i} \text{sen}(x_i)$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\prod%20\limits_{i=1}^{n}%20\sqrt{x_i}%20\sin(x_i))
 
 **4. Função Chung Reynolds**
 
-$f(x) = \left( \sum \limits_{i=1}^{n} x_i^2 \right)^2$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\left(%20\sum%20\limits_{i=1}^{n}%20x_i^2%20\right)^2)
 
 **5. Função Cosine Mixture**
 
-$f(x)=-0,1 \sum \limits_{i=1}^{n} \cos(5 \pi x_i) - \displaystyle\sum \limits_{i=1}^{n} x_i^2$
-
 ![Equação](https://latex.codecogs.com/png.latex?f(x)=-0.1%20\sum_{i=1}^{n}%20\cos(5%20\pi%20x_i)%20-%20\sum_{i=1}^{n}%20x_i^2)
-
 
 **6. Função Csendes**
 
