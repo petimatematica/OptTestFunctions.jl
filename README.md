@@ -29,11 +29,11 @@ Este documento apresenta uma coleção de funções teste para o estudo e desenv
 
 **7. Função Deb 1**
 
-![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20-\frac{1}{D}%20\sum%20\limits_{i=1}^{D}%20\sin^6(5\pi%20x_i))
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20-\frac{1}{n}%20\sum%20\limits_{i=1}^{n}%20\sin^6(5\pi%20x_i))
 
 **8. Função Deb 2**
 
-![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20-\frac{1}{D}%20\sum%20\limits_{i=1}^{D}%20\sin^6\left(5\pi\left(x_i^{\frac{3}{4}}-0.05\right)\right))
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20-\frac{1}{n}%20\sum%20\limits_{i=1}^{n}%20\sin^6\left(5\pi\left(x_i^{\frac{3}{4}}-0.05\right)\right))
 
 **9. Função Dejong**
 
@@ -45,7 +45,7 @@ A função Dixon-Price consiste em $f : \mathbb{R}^n \rightarrow [0, +\infty)$ d
 
 **11. Função Drop Wave**
 
-![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%201-%20\dfrac{1%2B\cos%20\left(12\sqrt{\sum%20\limits_{i=1}^D%20x_i^2}\right)}{0.5%20\sum%20\limits_{i=1}^D%20x_i^2%2B2})
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%201-%20\dfrac{1%2B\cos%20\left(12\sqrt{\sum%20\limits_{i=1}^n%20x_i^2}\right)}{0.5%20\sum%20\limits_{i=1}^D%20x_i^2%2B2})
 
 **12. Função Ellipsoid 1**
 
@@ -57,11 +57,11 @@ A função Dixon-Price consiste em $f : \mathbb{R}^n \rightarrow [0, +\infty)$ d
 
 **14. Função High Conditioned**
 
-![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\sum%20\limits_{i=1}^D%20\left((10^6)^{\frac{i-1}{D-1}}%20\cdot%20x_i^2\right))
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\sum%20\limits_{i=1}^n%20\left((10^6)^{\frac{i-1}{n-1}}%20\cdot%20x_i^2\right))
 
 **15. Função Exponential**
 
-![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20-\exp%7B\left(-0.5%20\sum%20\limits_{i=1}^D%20x_i^2%20\right)%7D)
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20-\exp%7B\left(-0.5%20\sum%20\limits_{i=1}^n%20x_i^2%20\right)%7n)
 
 **16. Função de Griewangk**
 
@@ -69,11 +69,11 @@ A função Dixon-Price consiste em $f : \mathbb{R}^n \rightarrow [0, +\infty)$ d
 
 **17. Função HappyCat**
 
-![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\left%20\vert%20\sum%20\limits_{i=1}^D%20x_i^2-%20D%20\right\vert^{1/4}%20+%20\dfrac{0.5%20\sum%20\limits_{i=1}^D%20x_i^2%20+%20\sum%20\limits_{i=1}^D%20x_i}{D}%20+0.5)
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\left%20\vert%20\sum%20\limits_{i=1}^D%20x_i^2-%20D%20\right\vert^{1/4}%20+%20\dfrac{0.5%20\sum%20\limits_{i=1}^n%20x_i^2%20+%20\sum%20\limits_{i=1}^n%20x_i}{n}%20+0.5)
 
 **18. Função HGBat**
 
-![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\left%20\vert%20\left(\sum%20\limits_{i=1}^D%20x_i^2\right)%20-%20\left(\sum%20\limits_{i=1}^D%20x_i\right)%20\right\vert^{1/2}%20+%20\dfrac{0.5%20\sum%20\limits_{i=1}^D%20x_i^2%20+%20\sum%20\limits_{i=1}^D%20x_i}{D}%20+0.5)
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\left%20\vert%20\left(\sum%20\limits_{i=1}^n%20x_i^2\right)%20-%20\left(\sum%20\limits_{i=1}^n%20x_i\right)%20\right\vert^{1/2}%20+%20\dfrac{0.5%20\sum%20\limits_{i=1}^n%20x_i^2%20+%20\sum%20\limits_{i=1}^n%20x_i}{n}%20+0.5)
 
 
 **19. Função Levy**
