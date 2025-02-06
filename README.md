@@ -43,7 +43,7 @@ Este documento apresenta uma coleção de funções teste para o estudo e desenv
 
 A função Dixon-Price consiste em $f : \mathbb{R}^n \rightarrow [0, +\infty)$ definida por 
 
-![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\sum_{i=2}^{n}%20i%20\cdot%20(2x_i^2%20-%20x_{i-1})^2%20+%20(x_1%20-%201)^2)
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20= %20(x_1%20-%201)^2) + %20\sum_{i=2}^{n}%20i%20\cdot%20(2x_i^2%20-%20x_{i-1})^2%20
 
 **11. Função Drop Wave**
 
