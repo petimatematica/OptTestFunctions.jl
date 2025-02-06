@@ -71,7 +71,7 @@ Este documento apresenta uma coleção de funções teste para o estudo e desenv
 
 **18. Função HGBat**
 
-$f(x)= \left \vert (\sum \limits_{i=1}^D x_i^2)- (\sum \limits_{i=1}^D x_i) \right \vert^{1/2} + \dfrac{0.5 \sum \limits_{i=1}^D x_i^2+\sum \limits_{i=1}^D x_i}{D}+0.5$
+![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\left%20\vert%20\left(\sum%20\limits_{i=1}^D%20x_i^2\right)%20-%20\left(\sum%20\limits_{i=1}^D%20x_i\right)%20\right\vert^{1/2}%20+%20\dfrac{0.5%20\sum%20\limits_{i=1}^D%20x_i^2%20+%20\sum%20\limits_{i=1}^D%20x_i}{D}%20+0.5)
 
 
 **19. Função Levy**
