@@ -41,6 +41,11 @@ Este documento apresenta uma coleção de funções teste para o estudo e desenv
 
 ![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20(x_1-1)^2%20+%20\sum%20\limits_{i=2}^{D}%20i(2x_i^2-x_{i-1})^2)
 
+A função Dixon-Price corresponde ao Problema $9$ apresentado em Dixon e Price (1989), \cite{dixon1989truncated}. Consideremos $f : \mathbb{R}^n \rightarrow [0, +\infty)$ definida por 
+\begin{equation*}
+    f(x) = \sum_{i=2}^{n} i \cdot (2x_i^2 - x_{i-1})^2 + (x_1 - 1)^2.
+\end{equation*}
+
 **11. Função Drop Wave**
 
 ![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%201-%20\dfrac{1%2B\cos%20\left(12\sqrt{\sum%20\limits_{i=1}^D%20x_i^2}\right)}{0.5%20\sum%20\limits_{i=1}^D%20x_i^2%2B2})
