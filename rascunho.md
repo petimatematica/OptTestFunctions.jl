@@ -79,6 +79,12 @@ $f(x)= \left \vert (\sum \limits_{i=1}^D x_i^2)- (\sum \limits_{i=1}^D x_i) \rig
 
 **19. Função Levy**
 
+$f(x)= \sin^2(\pi w_1)+\sum_{i=i}^{d-1}(w_i-1)^2[1+10sin^2(\pi w_i+1)]+(w_d-1)^2[1+sin^2(2\pi w_d)]$
+
+com
+
+$w_i=1+\frac{x_i-1}{4}, ~~~ \forall i= 1, \ldots d$
+
 
 **20. Função Michalewicz**
 
