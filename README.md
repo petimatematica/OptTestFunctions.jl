@@ -78,7 +78,7 @@ A função Dixon-Price consiste em $f : \mathbb{R}^n \rightarrow [0, +\infty)$ d
 
 **19. Função Levy**
 
-$\sum_{i=1}^nx_i$
+$\displaystyle\sum_{i=1}^nx_i$
 
 **20. Função Michalewicz**
 
