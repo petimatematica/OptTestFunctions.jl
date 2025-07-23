@@ -7,6 +7,8 @@ Este documento apresenta uma coleção de funções teste para o estudo e desenv
 
 ![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20-20%20\cdot%20\exp\left(-0.2%20\cdot%20\sqrt{\dfrac{1}{n}%20\sum_{i=1}^{n}%20x_i^2}%20\right)%20-%20\exp\left(%20\dfrac{1}{n}%20\sum_{i=1}^{n}%20\cos(2%20\pi%20x_i)%20\right)%20+%2020%20+%20\exp(1))
 
+$f(x)%20=%20-20%20\cdot%20\exp\left(-0.2%20\cdot%20\sqrt{\dfrac{1}{n}%20\sum_{i=1}^{n}%20x_i^2}%20\right)%20-%20\exp\left(%20\dfrac{1}{n}%20\sum_{i=1}^{n}%20\cos(2%20\pi%20x_i)%20\right)%20+%2020%20+%20\exp(1))$
+
 **2. Função Alpine 1**
 
 ![Equação](https://latex.codecogs.com/png.latex?f(x)%20=%20\sum%20\limits_{i=1}^{n}%20\left|x_i%20\sin(x_i)%20+%200.1x_i%20\right|)
