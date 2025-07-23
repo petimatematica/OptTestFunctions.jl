@@ -78,9 +78,7 @@ A função Dixon-Price consiste em $f : \mathbb{R}^n \rightarrow [0, +\infty)$ d
 
 **19. Função Levy**
 
-'''math
-\displaystyle\sum_{k=3}^5 k^2=3^2 + 4^2 + 5^2 =50
-'''
+$\displaystyle\sum_{k=3}^5 k^2=3^2 + 4^2 + 5^2 =50$
 
 
 **20. Função Michalewicz**
