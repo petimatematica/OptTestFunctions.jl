@@ -72,7 +72,8 @@ function ackley_hess(x::Vector{<:Real}, n::Int64)
         for j in (i + 1):n 
             xi = x[i]
             xj = x[j]
-            term1 = a * exp(- b * sqrt(sum1 / n)) * (- (b^2 * xi * xj) / sum3 - (b * n * xi * xj) / sum3^(3 / 2))
+            #term1 = a * exp(- b * sqrt(sum1 / n)) * (- (b^2 * xi * xj) / sum3 - (b * n * xi * xj) / sum3^(3 / 2))
+            term1 = a * exp(- b * sqrt(sum1 / n)) * (- (b^2 * xi * xj) / sum1 - (b * n * xi * xj) / sum1^(3 / 2))
             term2 = - exp(sum2 / n) * c^2 * sin(c * xi) * sin(c * xj) / n^2 
             H[i, j] = term1 + term2
             H[j, i] = H[i, j] 
